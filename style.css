@@ -53,7 +53,7 @@ body {
   font-family: "ProximaNova";
 }
 
-.container {
+.container, .about-company, .calculation {
   width: 100%;
   max-width: 1164px;
   padding: 0 12px;
@@ -81,7 +81,7 @@ body {
   border: #89C249;
 }
 .btn.btn-primary.btn-large {
-  padding: 21px 25px;
+  padding: 22px 25px;
   font-weight: 600;
   font-size: 16px;
   line-height: 146%;
@@ -90,6 +90,109 @@ body {
 .container-fluid {
   padding: 0 50px;
   max-width: 1920px;
+}
+
+.template-title, .template-title-left,
+.template-subtitle {
+  line-height: 124.5%;
+  text-align: center;
+}
+
+.template-title, .template-title-left {
+  position: relative;
+  margin-bottom: 79px;
+}
+.template-title h2, .template-title-left h2 {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.template-title h3, .template-title-left h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
+.template-title:after, .template-title-left:after {
+  content: "";
+  width: 85px;
+  height: 2px;
+  left: 50%;
+  bottom: -19px;
+  transform: translate(-50%, 0);
+  position: absolute;
+  background-color: #E58D35;
+}
+
+.template-title-left {
+  margin-bottom: 60px;
+}
+.template-title-left h2 {
+  text-align: left;
+}
+.template-title-left:after {
+  left: 0;
+  transform: translate(0, 0);
+}
+
+.before-inline:after {
+  display: none;
+}
+.before-inline h2:after {
+  content: "";
+  width: 85px;
+  height: 2px;
+  background-color: #E58D35;
+  margin: 0 0 10px 20px;
+  display: inline-block;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-checkbox {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: baseline;
+}
+.input-checkbox label {
+  margin: 3px 0 0 9px;
+}
+.input-checkbox input {
+  width: 24px;
+  height: 24px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 126%;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  padding: 19px 20px;
+  font-size: 15px;
+  line-height: 126%;
+  transition: 0.3s;
+  border: 1px solid rgb(255, 251, 251);
+}
+input::placeholder {
+  color: #CBCBCB;
+  transition: 0.3s;
+}
+input:focus {
+  border: 1px solid rgb(138, 132, 132);
+  box-shadow: rgba(211, 211, 232, 0.997) 0px 0px 11px 0px;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+input:focus-visible {
+  outline: none;
 }
 
 header {
@@ -214,7 +317,7 @@ header .navbar-toggler[aria-expanded=true] span:after {
   background-size: cover;
   border-radius: 20px;
 }
-.banner-item .container {
+.banner-item .container, .banner-item .about-company, .banner-item .calculation {
   min-height: 470px;
   padding: 0 170px;
   max-width: 1424px;
@@ -269,19 +372,88 @@ header .navbar-toggler[aria-expanded=true] span:after {
   transform: rotate(180deg);
 }
 
-/*//////about company*/
-.about-company__text {
-  margin-right: 25px;
+.container .ship, .about-company .ship, .calculation .ship {
+  width: 120px;
+  transform-box: fill-box;
+  transform: rotate(0deg);
+  transform-origin: 50% 100%;
+  offset-path: path("M61 104.499C272.583 73.102 389.465 74.4943 595.5 104.499C784.688 125.949 898.972 132.419 1115.5 104.499C1338.97 66.7394 1461.38 77.5228 1679 104.499");
+  animation: ship_move 20s linear infinite;
 }
-.about-company__title {
+@keyframes ship_move {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.calculation {
+  padding: 90px 12px 100px 12px;
+  margin: auto;
+}
+.calculation .template-title-left {
+  width: 626px;
+}
+
+.form-calculation {
+  background-color: #363A4D;
+  border-radius: 20px;
+  max-width: 626px;
+  padding: 50px 20px 60px 20px;
+}
+.form-calculation .row {
+  margin: 0 15px;
+}
+.form-calculation .row .btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 146%;
+  padding: 20px 27px;
+}
+.form-calculation .col-md-6 {
+  padding: 0 15px;
+}
+.form-calculation .col-md-12 label {
+  margin-bottom: 12px;
+}
+.form-calculation .col-md-12 input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.form-calculation .col-md-12 .labelfile {
+  width: 526px;
+  height: 43px;
+  background-color: inherit;
+  border: 2px dashed rgba(255, 255, 255, 0.26);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 126%;
+  padding: 10px;
+}
+.form-calculation .col-md-12 .labelfile:hover {
+  border: 2px solid rgb(138, 132, 132);
+  box-shadow: rgba(211, 211, 232, 0.997) 0px 0px 11px 0px;
+}
+
+/*//////about company*/
+/*/ copiration */
+/*.about-company{
+  &__text{
+      margin-right: 25px;
+  }
+  &__title{
   position: relative;
-  margin: 44px 0 65px;
+  margin:44px 0 65px;
   font-weight: 700;
   font-size: 36px;
   line-height: 124.5%;
   text-transform: uppercase;
-}
-.about-company__title::before {
+  &::before{
   content: "";
   position: absolute;
   top: 60px;
@@ -289,51 +461,52 @@ header .navbar-toggler[aria-expanded=true] span:after {
   height: 2px;
   width: 5.3125rem;
   background-image: url("data:image/svg+xml,%3Csvg width='85' height='2' viewBox='0 0 85 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='85' height='2' fill='%2389C249'/%3E%3C/svg%3E");
+
+  }
+  }
+  &__subtitle{
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 170%;
+  }
+  .container{
+      display: flex;
+      margin-top: 91px;
+      margin-bottom: 50px;
+
+  }
+
+}*/
+.about-company {
+  padding: 90px 12px 100px 12px;
+  display: flex;
+  margin: auto;
+}
+.about-company__text {
+  margin-right: 25px;
 }
 .about-company__subtitle {
   font-weight: 300;
   font-size: 18px;
   line-height: 170%;
 }
-.about-company .container {
+.about-company .container, .about-company .calculation, .about-company .about-company {
   display: flex;
   margin-top: 91px;
   margin-bottom: 50px;
 }
 
-/*/ copiration */
 .ready-for-cooperation {
   position: relative;
   margin: 50px;
-  padding: 90px 0 100px;
+  padding: 90px 12px 100px 12px;
   background-color: #363A4D;
   border-radius: 20px;
 }
-.ready-for-cooperation::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 5.3125rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='85' height='2' viewBox='0 0 85 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='85' height='2' fill='%2389C249'/%3E%3C/svg%3E");
-  top: 194px;
-  left: 46%;
-  display: block;
-}
-.ready-for-cooperation .container {
+.ready-for-cooperation .container, .ready-for-cooperation .calculation, .ready-for-cooperation .about-company {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.ready-for-cooperation__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 124.5%;
-  text-transform: uppercase;
-}
-.ready-for-cooperation__subtitle {
-  font-weight: 300;
-  font-size: 24px;
-  margin-bottom: 95px;
 }
 .ready-for-cooperation__content-box-first {
   display: flex;
@@ -360,22 +533,8 @@ header .navbar-toggler[aria-expanded=true] span:after {
   margin-bottom: 20px;
 }
 .ready-for-cooperation ul {
-  padding-right: 0;
+  padding-left: 0;
   list-style-position: inside;
-}
-
-.container .ship {
-  width: 120px;
-  transform-box: fill-box;
-  transform: rotate(0deg);
-  transform-origin: 50% 100%;
-  offset-path: path("M61 104.499C272.583 73.102 389.465 74.4943 595.5 104.499C784.688 125.949 898.972 132.419 1115.5 104.499C1338.97 66.7394 1461.38 77.5228 1679 104.499");
-  animation: ship_move 20s linear infinite;
-}
-@keyframes ship_move {
-  100% {
-    offset-distance: 100%;
-  }
 }
 
 footer {
@@ -455,7 +614,7 @@ footer {
     width: 100%;
     background-color: rgba(6, 6, 6, 0.097);
   }
-  .banner-item .container {
+  .banner-item .container, .banner-item .calculation, .banner-item .about-company {
     padding: 0 40px;
     margin: auto;
     display: flex;
@@ -464,7 +623,7 @@ footer {
     justify-content: center;
     z-index: 1;
   }
-  .banner-item .container .btn {
+  .banner-item .container .btn, .banner-item .calculation .btn, .banner-item .about-company .btn {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -486,7 +645,7 @@ footer {
   .slick-slide {
     margin: 0;
   }
-  .about-company .container {
+  .about-company {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -527,10 +686,7 @@ footer {
     margin: 0;
     padding: 54px 20px 60px 20px;
   }
-  .ready-for-cooperation::after {
-    left: calc(50% - 2.5rem);
-  }
-  .ready-for-cooperation .container {
+  .ready-for-cooperation .container, .ready-for-cooperation .calculation, .ready-for-cooperation .about-company {
     display: flex;
     flex-direction: column;
     align-items: center;
