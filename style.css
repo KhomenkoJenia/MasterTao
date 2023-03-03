@@ -178,6 +178,7 @@ input {
   font-size: 15px;
   line-height: 126%;
   transition: 0.3s;
+  color: black;
   border: 1px solid rgb(255, 251, 251);
 }
 input::placeholder {
@@ -186,7 +187,7 @@ input::placeholder {
 }
 input:focus {
   border: 1px solid rgb(138, 132, 132);
-  box-shadow: rgba(211, 211, 232, 0.997) 0px 0px 11px 0px;
+  box-shadow: rgba(211, 211, 232, 0.818) 0px 0px 11px 0px;
 }
 input:focus::placeholder {
   color: transparent;
@@ -427,7 +428,7 @@ header .navbar-toggler[aria-expanded=true] span:after {
   width: 526px;
   height: 43px;
   background-color: inherit;
-  border: 2px dashed rgba(255, 255, 255, 0.26);
+  border: 1px dashed rgba(255, 255, 255, 0.26);
   border-radius: 10px;
   text-align: center;
   font-weight: 400;
@@ -436,7 +437,7 @@ header .navbar-toggler[aria-expanded=true] span:after {
   padding: 10px;
 }
 .form-calculation .col-md-12 .labelfile:hover {
-  border: 2px solid rgb(138, 132, 132);
+  border: 1px solid rgb(138, 132, 132);
   box-shadow: rgba(211, 211, 232, 0.997) 0px 0px 11px 0px;
 }
 
