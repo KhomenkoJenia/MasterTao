@@ -16,3 +16,13 @@ $(document).ready(function(){
   
   
 });
+
+const btnBox = document.querySelectorAll('.input-checkbox');
+
+btnBox.forEach(item => {
+item.closest('.col-md-6').classList.add('button-group')
+})
+
+document.getElementById('fileInput').onchange = function () {
+document.getElementById('file-name').innerHTML = this.files[0].name;
+};
