@@ -1,3 +1,14 @@
+const elementSection = document.querySelectorAll("section");
+const containerFluid = document.querySelectorAll(".container-fluid");
+
+containerFluid.forEach((item) => {
+	const sectionHasFluid = item.closest("section");
+
+	if (!sectionHasFluid.classList.contains("first-screen")) {
+		sectionHasFluid.closest("section").style.padding = "0 50px";
+	}
+});
+
 $(document).ready(function () {
 	$(".banner").slick({
 		dots: true,
@@ -12,18 +23,6 @@ $(document).ready(function () {
 			},
 		],
 	});
-});
-const Section = document.querySelectorAll("section");
-const ContainerFluid = document.querySelectorAll("container-fluid");
-
-ContainerFluid.forEach((item) => {
-	const section = element.closest("section");
-
-	if (section.classList.contains("first-screen")) {
-		null;
-	} else {
-		section.closest("section").style.padding = "0 50px";
-	}
 });
 
 const btnBox = document.querySelectorAll(".input-checkbox");
