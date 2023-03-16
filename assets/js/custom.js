@@ -120,3 +120,35 @@ btnBox.forEach((item) => {
 document.getElementById("fileInput").onchange = function () {
 	document.getElementById("file-name").innerHTML = this.files[0].name;
 };
+
+$(".slider-template").slick({
+	dots: false,
+	infinite: false,
+	speed: 600,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 2000,
+	responsive: [
+		{
+			breakpoint: 1540,
+			settings: {
+				slidesToShow: 2,
+
+				infinite: true,
+			},
+		},
+		{
+			breakpoint: 1131,
+			settings: {
+				slidesToShow: 1,
+				dots: true,
+				arrows: false,
+			},
+		},
+
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	],
+});
