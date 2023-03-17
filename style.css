@@ -820,13 +820,14 @@ footer {
     min-width: 137px;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1430px) {
   section.dilivery .btn {
     max-width: 138px;
     min-width: 138px;
   }
   .slider-template {
-    max-width: 931px;
+    max-width: 1140px;
+    padding: 0px 40px;
   }
 }
 @media screen and (max-width: 1299px) {
@@ -836,6 +837,9 @@ footer {
   .calculation-row .img-box {
     right: 56px;
   }
+  .slider-template {
+    max-width: 830px;
+  }
 }
 @media screen and (max-width: 1199px) {
   .calculation-row .img-box {
@@ -844,7 +848,7 @@ footer {
 }
 @media screen and (max-width: 1130px) {
   .slider-template {
-    max-width: 542px;
+    max-width: 830px;
   }
 }
 @media screen and (max-width: 991px) {

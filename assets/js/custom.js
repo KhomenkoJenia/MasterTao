@@ -131,7 +131,7 @@ $(".slider-template").slick({
 	autoplaySpeed: 2000,
 	responsive: [
 		{
-			breakpoint: 1405,
+			breakpoint: 1299,
 			settings: {
 				slidesToShow: 2,
 
@@ -139,7 +139,7 @@ $(".slider-template").slick({
 			},
 		},
 		{
-			breakpoint: 1131,
+			breakpoint: 991,
 			settings: {
 				slidesToShow: 1,
 				dots: true,
