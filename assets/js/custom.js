@@ -131,7 +131,7 @@ $(".slider-template").slick({
 	autoplaySpeed: 2000,
 	responsive: [
 		{
-			breakpoint: 1540,
+			breakpoint: 1405,
 			settings: {
 				slidesToShow: 2,
 

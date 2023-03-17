@@ -814,7 +814,17 @@ footer {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 1539px) {
+@media screen and (max-width: 1538px) {
+  section.dilivery .btn {
+    max-width: 137px;
+    min-width: 137px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  section.dilivery .btn {
+    max-width: 138px;
+    min-width: 138px;
+  }
   .slider-template {
     max-width: 931px;
   }
@@ -1097,10 +1107,6 @@ footer {
   .slider-template {
     padding: 0;
     max-width: 360px;
-  }
-  .divilvery .slider-template-item__buttons .btn {
-    max-width: 138px;
-    min-width: 138px;
   }
 }
 /*# sourceMappingURL=style.css.map */
