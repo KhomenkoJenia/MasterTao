@@ -303,6 +303,14 @@ section > .container-fluid:not(.banner) {
   margin: 100px 0;
 }
 
+.green h2:after {
+  content: "";
+  background-color: #89c249;
+}
+.green:after {
+  background-color: #89c249;
+}
+
 header {
   padding: 25px 0 39px;
 }
@@ -528,6 +536,9 @@ header .navbar-toggler[aria-expanded=true] span:after {
 .advantages {
   margin-bottom: 90px;
 }
+.advantages .container-fluid {
+  max-width: 1140px;
+}
 
 .advantage {
   text-align: center;
@@ -750,6 +761,127 @@ section.dilivery .container-fluid {
   display: flex;
   margin-top: 91px;
   margin-bottom: 50px;
+  padding: 0 200px;
+}
+
+.accordion {
+  max-width: 716px;
+  margin-right: 34px;
+}
+
+.accordion-item {
+  margin-bottom: 16px;
+  background-color: inherit;
+  border: none;
+}
+
+.accordion-item__title {
+  padding: 20px 31px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 124.5%;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #282b38;
+  border: 1px solid #3a444e;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.accordion-item__title:hover .accordion-item__title {
+  background-color: #363a4d;
+}
+
+.accordion-item.active .accordion-item__title {
+  background-color: #ffffff;
+  color: #000000;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.accordion-item.active .accordion-item__title:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5 26.5781C6.27539 26.5781 0.421874 20.7246 0.421874 13.5C0.421875 6.27539 6.27539 0.421875 13.5 0.421876C20.7246 0.421876 26.5781 6.27539 26.5781 13.5C26.5781 20.7246 20.7246 26.5781 13.5 26.5781ZM24.8906 13.5C24.8906 7.24043 19.8229 2.10938 13.5 2.10938C7.24043 2.10938 2.10937 7.17715 2.10937 13.5C2.10937 19.7596 7.17715 24.8906 13.5 24.8906C19.7596 24.8906 24.8906 19.8229 24.8906 13.5ZM20.0127 12.8408L13.9482 6.77109C13.7004 6.52324 13.2996 6.52324 13.0518 6.77109L6.9873 12.8408C6.73945 13.0887 6.73945 13.4895 6.9873 13.7373L7.35117 14.1012C7.59902 14.349 8.01035 14.349 8.25293 14.0906L12.6035 9.58184L12.6035 19.6172C12.6035 19.9652 12.8883 20.25 13.2363 20.25L13.7637 20.25C14.1117 20.25 14.3965 19.9652 14.3965 19.6172L14.3965 9.58184L18.7471 14.0959C18.9949 14.349 19.401 14.3543 19.6488 14.1064L20.0127 13.7426C20.2605 13.4895 20.2605 13.0887 20.0127 12.8408Z' fill='%23E58D35'/%3E%3C/svg%3E%0A");
+}
+
+.accordion-item__title:before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  width: 26px;
+  height: 26px;
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.421875 13.5C0.421875 6.27539 6.27539 0.421875 13.5 0.421875C20.7246 0.421875 26.5781 6.27539 26.5781 13.5C26.5781 20.7246 20.7246 26.5781 13.5 26.5781C6.27539 26.5781 0.421875 20.7246 0.421875 13.5ZM13.5 24.8906C19.7596 24.8906 24.8906 19.8229 24.8906 13.5C24.8906 7.24043 19.8229 2.10938 13.5 2.10938C7.24043 2.10938 2.10938 7.17715 2.10938 13.5C2.10938 19.7596 7.17715 24.8906 13.5 24.8906ZM14.1592 20.0127L20.2289 13.9482C20.4768 13.7004 20.4768 13.2996 20.2289 13.0518L14.1592 6.9873C13.9113 6.73945 13.5105 6.73945 13.2627 6.9873L12.8988 7.35117C12.651 7.59902 12.651 8.01035 12.9094 8.25293L17.4182 12.6035H7.38281C7.03477 12.6035 6.75 12.8883 6.75 13.2363V13.7637C6.75 14.1117 7.03477 14.3965 7.38281 14.3965H17.4182L12.9041 18.7471C12.651 18.9949 12.6457 19.401 12.8936 19.6488L13.2574 20.0127C13.5105 20.2605 13.9113 20.2605 14.1592 20.0127Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-repeat: repeat;
+  background-position: center;
+  transition: 0.3s;
+}
+
+.accordion-item__content {
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+  line-height: 0;
+  transition: 0.3s;
+  opacity: 0;
+  border: none;
+  background: #464646;
+}
+
+.accordion-item.active .accordion-item__content {
+  padding: 12px 20px;
+  line-height: 1.3;
+  opacity: 1;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 144.5%;
+  color: #282b38;
+  background: #ffffff;
+  border-bottom: none;
+}
+
+.title-form {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 126%;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.question-content {
+  display: flex;
+  justify-content: center;
+}
+.question-content .form-calculation {
+  max-width: 390px;
+  padding: 25px 20px;
+  margin-bottom: 16px;
+}
+.question-content .form-calculation .col-md-12 button {
+  padding: 18px 28px;
+  margin: 0 auto;
+  width: 85%;
+}
+.question-content .form-calculation .col-md-12 .big-iput {
+  height: 70px;
+}
+.question-content .form-calculation .col-md-12 label {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 126%;
+  margin-bottom: 23px;
+  text-align: center;
+}
+.question-content .form-calculation .col-md-12 input {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  overflow: auto;
+  position: static;
+  z-index: 1;
 }
 
 .ready-for-cooperation {
@@ -797,6 +929,7 @@ footer .footer-nav {
   display: flex;
   justify-content: space-between;
   padding-top: 41px;
+  margin-top: 50px;
   border-top: 2px solid #e58d35;
 }
 footer .footer-info__logo {
@@ -923,7 +1056,7 @@ footer .nav-link__info:hover {
     line-height: 222%;
   }
   .navbar-collapse {
-    margin: 15px -12px;
+    margin: 15px -12px -15px;
     background-color: #363a4d;
     display: flex;
     flex-direction: column;
@@ -994,6 +1127,10 @@ footer .nav-link__info:hover {
     justify-content: center;
     align-items: center;
     padding: 0 50px;
+  }
+  .about-company .about-box {
+    margin-top: 55px;
+    padding: 0 20px;
   }
   .about-company__text {
     margin: 0;
@@ -1088,7 +1225,7 @@ footer .nav-link__info:hover {
     max-width: 100%;
   }
   .form-calculation {
-    padding: 52px 30px 34px;
+    padding: 38px 20px;
   }
   .form-calculation .col-md-7 {
     display: flex;
@@ -1105,6 +1242,9 @@ footer .nav-link__info:hover {
   }
   .advantage-img {
     margin: 10px auto 22px;
+  }
+  .advantages {
+    margin-bottom: 0px;
   }
   .advantages .slick-dots {
     margin: 48px 0 60px;
@@ -1163,6 +1303,9 @@ footer .nav-link__info:hover {
     padding: 0;
     max-width: 360px;
   }
+  .dilivery {
+    margin: 0;
+  }
   footer .footer-nav {
     display: flex;
     justify-content: center;
@@ -1175,6 +1318,19 @@ footer .nav-link__info:hover {
   }
   footer .footer-nav .nav-item {
     display: none;
+  }
+  input {
+    padding: 19px 30px;
+  }
+  .question-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .question-content .form-calculation {
+    margin: 20px auto 60px;
+  }
+  .accordion {
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
